@@ -48,7 +48,7 @@ langBtn.addEventListener('click', () => {
   const newLangCode = getTMDbLanguageCode(newLang);
   fetchAllMoviesFromList(LIST_ID, API_KEY, newLangCode).then(movies => {
     allFetchedMovies = movies;
-    applyGenreFilter(); // Aplica os filtros atuais aos novos filmes
+    applyGenreFilter();
   });
 });
 
@@ -66,8 +66,6 @@ function updateLanguageContent(lang) {
   const actorDescriptions = document.querySelectorAll('.actor-info p');
   const contactTitle = document.querySelector('#contact h2');
   const contactParagraph = document.querySelector('#contact p');
-
-  
 
   if (lang === 'PT') {
     heroSpan.textContent = "Welcome to Gabys' Website!";
@@ -213,19 +211,19 @@ async function loadFavoriteFilms() {
 }
 
 const GENRES = [
-  { id: 28, name: 'Ação' },
-  { id: 12, name: 'Aventura' },
-  { id: 16, name: 'Animação' },
-  { id: 35, name: 'Comédia' },
+  { id: 28, name: 'Action' },
+  { id: 12, name: 'Adventure' },
+  { id: 16, name: 'Animation' },
+  { id: 35, name: 'Comedy' },
   { id: 80, name: 'Crime' },
   { id: 18, name: 'Drama' },
-  { id: 10751, name: 'Família' },
-  { id: 14, name: 'Fantasia' },
-  { id: 27, name: 'Terror' },
-  { id: 10402, name: 'Música' },
-  { id: 9648, name: 'Mistério' },
+  { id: 10751, name: 'Family' },
+  { id: 14, name: 'Fantasy' },
+  { id: 27, name: 'Horror' },
+  { id: 10402, name: 'Musical' },
+  { id: 9648, name: 'Mystery' },
   { id: 10749, name: 'Romance' },
-  { id: 878, name: 'Ficção Científica' },
+  { id: 878, name: 'Sci-fi' },
   { id: 53, name: 'Thriller' },
 ];
 
